@@ -1,6 +1,7 @@
 body {
     margin: 0;
     background-color: gainsboro;
+    box-sizing: border-box;
 }
 
 .verticalGridContainer {
@@ -46,6 +47,7 @@ body {
     font-size: 2rem;
 }
 
+/* --------------------- Skills Containers --------------------- */
 
 .skillsContainer {
     position: relative;
@@ -54,81 +56,159 @@ body {
     height: 600px;
 }
 
-@keyframes diamondMove {
-    0% {top: 0; bottom: 0; right: 0; left: 0; margin: auto; transform: rotate(25deg)}
-    100% {top: 0; bottom: 0; left: 15%; margin: auto 0; transform: rotate(0deg)}
-}
+/* --------------------- Diamond one --------------------- */
 
+.skillsContainer:not(:hover) div:nth-child(1) {
+    transform: rotate(25deg); 
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition-duration: 2s;
+}
+.skillsContainer:hover div:nth-child(1) {
+    transform: rotate(0deg); 
+    top: 0; 
+    bottom: 0; 
+    right: 45%; 
+    left: 0;
+    transition-duration: 2s;
+}
 .diamond1 {
     position: absolute;
     height: 100px;
     width: 100px;
     border: 1px solid black;
-    transform: rotate(25deg);
+    margin: auto;
+}
+
+/* --------------------- Diamond two --------------------- */
+
+.skillsContainer:hover div:nth-child(2) {
+    transform: rotate(0deg); 
+    top: 0; 
+    bottom: 40%; 
+    right: 0; 
+    left: 35%;
+    transition-duration: 2s;
+}
+.skillsContainer:not(:hover) div:nth-child(2) {
+    transform: rotate(35deg); 
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    margin: auto;
+    transition-duration: 2s;
 }
-
 .diamond2 {
     position: absolute;
     height: 100px;
     width: 100px;
     border: 1px solid black;
-    transform: rotate(35deg);
+    margin: auto;
+}
+
+/* --------------------- Diamond three --------------------- */
+
+.skillsContainer:hover div:nth-child(3) { 
+    transform: rotate(0deg); 
+    top: 0; 
+    bottom: 0; 
+    right: 0; 
+    left: 45%;
+    transition-duration: 2s;
+}
+.skillsContainer:not(:hover) div:nth-child(3) {
+    transform: rotate(45deg); 
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    margin: auto;
+    transition-duration: 2s;
 }
-/* .diamond2:hover { 
-    transform: rotate(50deg)
-} */
 .diamond3 {
     position: absolute;
     height: 100px;
     width: 100px;
     border: 1px solid black;
-    transform: rotate(45deg);
+    margin: auto;
+}
+
+/* --------------------- Diamond four --------------------- */
+
+.skillsContainer:hover div:nth-child(4){ 
+    transform: rotate(0deg); 
+    top: 0; 
+    bottom: 45%; 
+    right: 0; 
+    left: 0;
+    transition-duration: 2s;
+}
+.skillsContainer:not(:hover) div:nth-child(4) {
+    transform: rotate(55deg); 
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    margin: auto;
+    transition-duration: 2s;
 }
-/* .diamond3:hover { 
-    transform: rotate(50deg)
-} */
 .diamond4 {
     position: absolute;
     height: 100px;
     width: 100px;
     border: 1px solid black;
-    transform: rotate(55deg);
+    margin: auto;
+}
+
+/* --------------------- Diamond five --------------------- */
+
+.skillsContainer:hover div:nth-child(5) { 
+    transform: rotate(0deg); 
+    top: 0; 
+    bottom: 40%; 
+    right: 35%; 
+    left: 0;
+    transition-duration: 2s;
+}
+.skillsContainer:not(:hover) div:nth-child(5) {
+    transform: rotate(65deg); 
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    margin: auto;
+    transition-duration: 2s;
 }
-/* .diamond4:hover { 
-    transform: rotate(50deg)
-} */
 .diamond5 {
     position: absolute;
     height: 100px;
     width: 100px;
     border: 1px solid black;
-    transform: rotate(65deg);
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
     margin: auto;
 }
-/* .diamond5:hover { 
-    transform: rotate(50deg)
-} */
+
+.tbd {
+    grid-column: 9 / 12;
+}
+
+.cardSlider {
+    grid-column: 1 / 11;
+    border: 1px solid black;
+    height: 500px;
+}
+
+.jobFlexContainer {
+    display: flex;
+    border: 1px solid black;
+    margin: auto 35px;
+    height: 400px;
+    width: 1200px;
+    overflow: hidden;
+}
+
+.card {
+    flex: 1 0 50%;
+    border: 1px solid black;
+    height: 300px;
+    width: 300px;
+    margin: auto 50px;
+}
