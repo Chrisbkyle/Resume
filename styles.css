@@ -10,7 +10,7 @@ body {
     grid-template-rows: repeat(11, auto);
 }
 
-
+/* --------------------- Header Row --------------------- */
 
 .headerContent {
     grid-column:1 / 11;
@@ -35,7 +35,7 @@ body {
     align-items: center;
 }
 
-
+/* --------------------- BAGS Statement --------------------- */
 
 .bagsStatementContainer {
     grid-column: 1 / 12;
@@ -47,168 +47,216 @@ body {
     font-size: 2rem;
 }
 
-/* --------------------- Skills Containers --------------------- */
+/* --------------------- Skills/Tech Stack Row --------------------- */
 
 .skillsContainer {
     position: relative;
-    grid-column: 1 / 9;
+    grid-column: 1 / 10;
     background-color: grey;
     height: 600px;
+    /* border: 1px solid black; */
 }
 
-/* --------------------- Diamond one --------------------- */
+    /* --------------------- Diamond one --------------------- */
 
-.skillsContainer:not(:hover) div:nth-child(1) {
-    transform: rotate(25deg); 
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    transition-duration: 2s;
+    .skillsContainer:not(:hover) div:nth-child(1) {
+        transform: rotate(25deg); 
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transition-duration: 2s;
+    }
+    .skillsContainer:hover div:nth-child(1) {
+        transform: rotate(0deg); 
+        top: 0; 
+        bottom: 0; 
+        right: 45%; 
+        left: 0;
+        transition-duration: 2s;
+    }
+    .diamond1 {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        margin: auto;
+    }
+
+    /* --------------------- Diamond two --------------------- */
+
+    .skillsContainer:hover div:nth-child(2) {
+        transform: rotate(0deg); 
+        top: 0; 
+        bottom: 40%; 
+        right: 35%; 
+        left: 0;
+        transition-duration: 2s;
+    }
+    .skillsContainer:not(:hover) div:nth-child(2) {
+        transform: rotate(35deg); 
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transition-duration: 2s;
+    }
+    .diamond2 {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        margin: auto;
+    }
+
+    /* --------------------- Diamond three --------------------- */
+
+    .skillsContainer:hover div:nth-child(3) { 
+        transform: rotate(0deg); 
+        top: 0; 
+        bottom: 45%; 
+        right: 0; 
+        left: 0;
+        transition-duration: 2s;
+    }
+    .skillsContainer:not(:hover) div:nth-child(3) {
+        transform: rotate(45deg); 
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transition-duration: 2s;
+    }
+    .diamond3 {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        margin: auto;
+    }
+
+    /* --------------------- Diamond four --------------------- */
+
+    .skillsContainer:hover div:nth-child(4){ 
+        transform: rotate(0deg); 
+        top: 0; 
+        bottom: 40%; 
+        right: 0; 
+        left: 35%;
+        transition-duration: 2s;
+    }
+    .skillsContainer:not(:hover) div:nth-child(4) {
+        transform: rotate(55deg); 
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transition-duration: 2s;
+    }
+    .diamond4 {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        margin: auto;
+    }
+
+    /* --------------------- Diamond five --------------------- */
+
+    .skillsContainer:hover div:nth-child(5){ 
+        transform: rotate(0deg); 
+        top: 0; 
+        bottom: 0; 
+        right: 0; 
+        left: 45%;
+        transition-duration: 2s;
+    }
+    .skillsContainer:not(:hover) div:nth-child(5) {
+        transform: rotate(55deg); 
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transition-duration: 2s;
+    }
+    .diamond5 {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        margin: auto;
+    }
+
+
+
+/* --------------------- Tech Stack --------------------- */
+
+.techStackContainer {
+    display: flex;
+    flex-direction: column;
+    grid-column: 10 / 12;
+    /* border-left: 5px solid black; */
+    margin-left: 2%;
+    width: 100%;
+    height: 600px;
+    background-color: grey;
 }
-.skillsContainer:hover div:nth-child(1) {
-    transform: rotate(0deg); 
-    top: 0; 
-    bottom: 0; 
-    right: 45%; 
-    left: 0;
-    transition-duration: 2s;
+
+.techStackLogos {
+    background-color: darkslateblue;
+    padding: auto 5%;
+    height: 13.9%;
+    margin: .3857% 0;
 }
-.diamond1 {
-    position: absolute;
-    height: 100px;
-    width: 100px;
+
+
+
+/* ------------------------ Project Display ------------------------ */
+
+.projectDisplay {
     border: 1px solid black;
-    margin: auto;
+    grid-column: 1 / 12;
+    height: 500px;
 }
 
-/* --------------------- Diamond two --------------------- */
 
-.skillsContainer:hover div:nth-child(2) {
-    transform: rotate(0deg); 
-    top: 0; 
-    bottom: 40%; 
-    right: 0; 
-    left: 35%;
-    transition-duration: 2s;
-}
-.skillsContainer:not(:hover) div:nth-child(2) {
-    transform: rotate(35deg); 
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    transition-duration: 2s;
-}
-.diamond2 {
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    border: 1px solid black;
-    margin: auto;
-}
-
-/* --------------------- Diamond three --------------------- */
-
-.skillsContainer:hover div:nth-child(3) { 
-    transform: rotate(0deg); 
-    top: 0; 
-    bottom: 0; 
-    right: 0; 
-    left: 45%;
-    transition-duration: 2s;
-}
-.skillsContainer:not(:hover) div:nth-child(3) {
-    transform: rotate(45deg); 
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    transition-duration: 2s;
-}
-.diamond3 {
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    border: 1px solid black;
-    margin: auto;
-}
-
-/* --------------------- Diamond four --------------------- */
-
-.skillsContainer:hover div:nth-child(4){ 
-    transform: rotate(0deg); 
-    top: 0; 
-    bottom: 45%; 
-    right: 0; 
-    left: 0;
-    transition-duration: 2s;
-}
-.skillsContainer:not(:hover) div:nth-child(4) {
-    transform: rotate(55deg); 
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    transition-duration: 2s;
-}
-.diamond4 {
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    border: 1px solid black;
-    margin: auto;
-}
-
-/* --------------------- Diamond five --------------------- */
-
-.skillsContainer:hover div:nth-child(5) { 
-    transform: rotate(0deg); 
-    top: 0; 
-    bottom: 40%; 
-    right: 35%; 
-    left: 0;
-    transition-duration: 2s;
-}
-.skillsContainer:not(:hover) div:nth-child(5) {
-    transform: rotate(65deg); 
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    transition-duration: 2s;
-}
-.diamond5 {
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    border: 1px solid black;
-    margin: auto;
-}
-
-.tbd {
-    grid-column: 9 / 12;
-}
+/* --------------------- Job History Slider Row --------------------- */
 
 .cardSlider {
-    grid-column: 1 / 11;
+    grid-column: 1 / 12;
     border: 1px solid black;
     height: 500px;
 }
 
-.jobFlexContainer {
-    display: flex;
-    border: 1px solid black;
-    margin: auto 35px;
-    height: 400px;
-    width: 1200px;
-    overflow: hidden;
+.jobSliderContainer {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 36%;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+
+}
+
+.scrollSnap { 
+    scroll-snap-type: inline mandatory;
+}
+
+.scrollSnap > * {
+    scroll-snap-align: start; 
 }
 
 .card {
-    flex: 1 0 50%;
+    padding: 1rem;
     border: 1px solid black;
-    height: 300px;
-    width: 300px;
-    margin: auto 50px;
+    border-radius: 5%;
+    height: 400px;
+    margin: 1rem;
+}
+
+.card > img {
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
