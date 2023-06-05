@@ -236,15 +236,8 @@ body {
 
     overflow-x: auto;
     overscroll-behavior-inline: contain;
+    overflow: hidden;
 
-}
-
-.scrollSnap { 
-    scroll-snap-type: inline mandatory;
-}
-
-.scrollSnap > * {
-    scroll-snap-align: start; 
 }
 
 .card {
