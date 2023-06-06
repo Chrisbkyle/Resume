@@ -10,7 +10,7 @@
     </head>
     <body>
 
-        <!-- Top section -->
+        <!-- First Row -->
 
         <div class="verticalGridContainer">
 
@@ -27,7 +27,7 @@
 
             <img src="./resources/images/Shutterstock_272552858.jpg" width="300px" height="300px" class="profilePicture">
 
-            <!--  Second Section -->
+            <!--  Second Row -->
 
             <div class="bagsStatementContainer">
                 
@@ -74,11 +74,34 @@
                 <span>ec2</span>
             </div>
             </div>
+
+            <!--  Third Row -->
+
             <div class="projectDisplay">
-                <img src="./resources/images/recipeselect laptop.jpg" height="160px" width="320px">
-                <img src="./resources/images/recipebuilder tablet.jpg" height="400px" width="300px">
-                <p></p>
+
+                <div class="slideshowContainer">
+
+                    <div class="slideCard">
+                        <div class="slideNumber">Photo: 1 / 3</div>
+                        <img src="./resources/images/recipeselect laptop.jpg" class="slideshowPhoto">
+                        <div class="text">test caption</div>
+                    </div>
+
+                    <div class="slideCard">
+                        <div class="slideNumber">Photo: 2 / 3</div>
+                        <img src="./resources/images/recipebuilder tablet.jpg" class="slideshowPhoto">
+                        <div class="text">test caption</div>
+                    </div>
+
+
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
             </div>
+
+            <!--  Forth Row -->
+
             <div class="cardSlider">
                 <div class="jobSliderContainer" id="imageTrack">
                     <div class="card">
@@ -121,6 +144,56 @@
     </body>
 
     <script>
+
+        /*
+
+        
+
+        */
+
+        let slideIndex = 1;
+        showSlides(slideIndex)
+
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName('slideCard');
+            let dots = document.getElementsByClassName('dot')
+
+            if (n > slides.length) {slideIndex = 1};
+            if (n < 1) {slideIndex = slides.length};
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            };
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active ", "");
+            };
+
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += "active";
+        }
+
+
+
+ 
+        /* 
+        
+        Job Slider slide scroll
+        
+        */
+
+
         const slider = document.querySelector('.jobSliderContainer')
         let isDown = false;
         let startX;
@@ -150,5 +223,9 @@
             const walk = (x - startX) * 1;
             slider.scrollLeft = scrollLeft - walk;
             console.log(walk);
+
+
+
+
         });</script>
 </html>
