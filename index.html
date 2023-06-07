@@ -20,12 +20,13 @@
                     <h3 class="titleDescriptor">Junior Software developer in training</h3>
                 </div>
                 <div class="titleButtonContainer">
-                    <button><img src="./resources/images/linkedin.png" height="40px" width="40px"></button>
-                    <button><img src="./resources/images/github-mark.png" height="40px" width="40px"></button>
+                    <button><img src="./resources/images/linkedin.png" height="40px" width="40px"></button><button><img src="./resources/images/github-mark.png" height="40px" width="40px"></button>
                 </div>
             </div>
 
-            <img src="./resources/images/Shutterstock_272552858.jpg" width="300px" height="300px" class="profilePicture">
+            <div style="background-color: #F36259">
+                <img src="./resources/images/Shutterstock_272552858.jpg" width="300px" height="300px" class="profilePicture">
+            </div>
 
             <!--  Second Row -->
 
@@ -38,41 +39,46 @@
             </div>
 
             <div class="skillsContainer">
-                <div class="diamond1 rotate">Creative Problem Solver</div>
-                <div class="diamond2 rotate">b</div>
-                <div class="diamond3 rotate">c</div>
-                <div class="diamond4 rotate">d</div>
-                <div class="diamond5 rotate">e</div>
+                <div class="diamond1">Creative Problem Solver</div>
+                <div class="diamond2">b</div>
+                <div class="diamond3">c</div>
+                <div class="diamond4">d</div>
+                <div class="diamond5">e</div>
             </div>
             <div class="techStackContainer">
-            <div class="techStackLogos">
-                <img src="./resources/images/html-5.png" height="70px" width="75px">
-                <span>html</span>
-            </div>
-            <div class="techStackLogos">
-                <img src="./resources/images/css.png" height="70px" width="75px">
-                <span>css</span>
-            </div>
-            <div class="techStackLogos">
-                <img src="./resources/images/React-icon.svg.png" height="70px" width="75px">
-                <span>React</span>
-            </div>
-            <div class="techStackLogos">
-                <img src="./resources/images/320px-Node.js_logo.svg.png" height="70px" width="75px">
-                <span>Nodejs</span>
-            </div>
-            <div class="techStackLogos">
-                <img src="./resources/images/github-mark.png" height="70px" width="75px">
-                <span>git</span>
-            </div>
-            <div class="techStackLogos">
-                <img src="./resources/images/Docker_(container_engine)_logo_(cropped).png" height="70px" width="75px">
-                <span>docker</span>
-            </div>
-            <div class="techStackLogos">
-                <img src="./resources/images/ec2-logo.png" height="70px" width="75px">
-                <span>ec2</span>
-            </div>
+                <div class="techStackLogos">
+                    <img src="./resources/images/html-5.png">
+                    <span>html</span>
+                </div>
+                <div class="techStackLogos">
+                    <img src="./resources/images/css.png">
+                    <span>css</span>
+                </div>
+                <div class="techStackLogos">
+                    <img src="./resources/images/React-icon.svg.png">
+                    <span>React</span>
+                </div>
+                <div class="techStackLogos">
+                    <img src="./resources/images/320px-Node.js_logo.svg.png">
+                    <span>Nodejs</span>
+                </div>
+                <div class="techStackLogos">
+                    <img src="./resources/images/mongodb-logo-png-transparent.png">
+                    <img src="./resources/images/mysql-logo-png-transparent.png">
+                    <span>MySQL & MongoDB</span>
+                </div>
+                <div class="techStackLogos">
+                    <img src="./resources/images/github-mark.png">
+                    <span>git</span>
+                </div>
+                <div class="techStackLogos">
+                    <img src="./resources/images/Docker_(container_engine)_logo_(cropped).png">
+                    <span>docker</span>
+                </div>
+                <div class="techStackLogos">
+                    <img src="./resources/images/ec2-logo.png">
+                    <span>ec2</span>
+                </div>
             </div>
 
             <!--  Third Row -->
@@ -80,7 +86,7 @@
             <div class="projectDisplay">
 
                 <div class="projectDisplayIntro">
-                    <div class="projectTitle">Office Chef</div>
+                    <h1 class="projectTitle">Office Chef</h1>
 
                     <div class="slideshowContainer">
 
@@ -103,16 +109,6 @@
                             <div class="text">test caption</div>
                         </div>
 
-                        <div class="slideCard">
-                            <div class="slideNumber">Photo: 4 / 4</div>
-                            <img src="./resources/images/recipebuilder tablet.jpg" class="slideshowPhoto">
-                            <div class="text">test caption</div>
-                        </div>
-
-
-
-
-
                         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                         <a class="next" onclick="plusSlides(1)">&#10095;</a>
                     </div>
@@ -122,9 +118,8 @@
                         <span class="dot" onclick="currentSlide(1)"></span>
                         <span class="dot" onclick="currentSlide(2)"></span>                        
                         <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <!-- <span class="dot" onclick="currentSlide(4)"></span> -->
                     </div>
-                    <div class="projectDetails">Hello, fill in here</div>
 
 
 
@@ -134,68 +129,85 @@
 
             <!--  Forth Row -->
 
+            <div class="Education container">Education</div>
+
+            <!--  Fifth Row -->
+
+            <div class="awards"></div>
+
             <div class="cardSlider">
                 <div class="jobSliderContainer" id="imageTrack">
 
                     <div class="card">
                         <div class="cardHeader">
-                            <div>Mudbrick Vineyards</div>
+                            <h3>Mudbrick Vineyards</h3>
                             <img src="./resources/images/Mudbrick.jpg">
                             <div>Worked: December 2016- October 2017 & March 2019 - September 2022</div>
                         </div>
-                        <pre>
+                        <p>
                             Menu costing and development, 
+                            <br>
                             Hiring and rostering, 
+                            <br>
                             Developing young chefs and kitchen hands, 
+                            <br>
                             Inventory control, Food purchasing.
-                        </pre>
+                        </p>
                     </div>
 
                     <div class="card">
                         <div class="cardHeader">
-                            <div>Fairmont Hotel Vancouver Airport</div>
+                            <h3>Fairmont Hotel Vancouver Airport</h3>
                             <img src="./resources/images/FVA.jpg">
                             <div>Worked: March 2018 - March 2019</div>
                         </div>
-                        <pre>
+                        <p>
                             Running service in a la carte kitchen, 
+                            <br>
                             Collaborating in menu development, 
+                            <br>
                             Back of house ‘sustainability committee’ representative
-                        </pre>
+                        </p>
                     </div>
 
                     <div class="card">
                         <div class="cardHeader">
-                            <div>Hamilton Island Resorts</div>
+                            <h3>Hamilton Island Resorts</h3>
                             <img src="./resources/images/Hamilton-Island.jpg">
                             <div>Worked: October 2015 - June 2016</div>
                         </div>
-                        <pre>
+                        <p>
                             Running service in an a la carte kitchen, 
+                            <br>
                             Developing young staff, 
+                            <br>
                             Food purchasing, 
+                            <br>
                             running daily specials and supervising a kitchen team
-                        </pre>
+                        </p>
                     </div>
 
                     <div class="card">
                         <div class="cardHeader">
-                            <div>Sequoia Company of Restaurants</div>
+                            <h3>Sequoia Company of Restaurants</h3>
                             <img src="./resources/images/Cardero's.jpg">
                             <div>Worked: February 2011 - August 2015</div>
                         </div>
-                        <pre>
+                        <p>
                             Started as prep chef in 2011 and advanced to role as Sous chef in 2013
+                            <br>
                             Running service in high volume kitchen, 
+                            <br>
                             Invoicing, 
+                            <br>
                             Food Purchasing
-                        </pre>
+                        </p>
                     </div>
 
                 </div>
             </div>
 
-            <div>8</div>
+
             <div>9</div>
             <div>10</div>
             <div>11</div>
