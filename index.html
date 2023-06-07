@@ -79,59 +79,119 @@
 
             <div class="projectDisplay">
 
-                <div class="slideshowContainer">
+                <div class="projectDisplayIntro">
+                    <div class="projectTitle">Office Chef</div>
 
-                    <div class="slideCard">
-                        <div class="slideNumber">Photo: 1 / 3</div>
-                        <img src="./resources/images/recipeselect laptop.jpg" class="slideshowPhoto">
-                        <div class="text">test caption</div>
+                    <div class="slideshowContainer">
+
+
+
+                        <div class="slideCard">
+                            <div class="slideNumber">Photo: 1 / 4</div>
+                            <img src="./resources/images/recipeselect laptop.jpg" class="slideshowPhoto">
+                            <div class="text">test caption</div>
+                        </div>
+
+                        <div class="slideCard">
+                            <div class="slideNumber">Photo: 2 / 4</div>
+                            <img src="./resources/images/recipebuilder tablet.jpg" class="slideshowPhoto">
+                            <div class="text">test caption</div>
+                        </div>
+                        <div class="slideCard">
+                            <div class="slideNumber">Photo: 3 / 4</div>
+                            <img src="./resources/images/recipeselect laptop.jpg" class="slideshowPhoto">
+                            <div class="text">test caption</div>
+                        </div>
+
+                        <div class="slideCard">
+                            <div class="slideNumber">Photo: 4 / 4</div>
+                            <img src="./resources/images/recipebuilder tablet.jpg" class="slideshowPhoto">
+                            <div class="text">test caption</div>
+                        </div>
+
+
+
+
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
                     </div>
+                    <br>
 
-                    <div class="slideCard">
-                        <div class="slideNumber">Photo: 2 / 3</div>
-                        <img src="./resources/images/recipebuilder tablet.jpg" class="slideshowPhoto">
-                        <div class="text">test caption</div>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>                        
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
                     </div>
+                    <div class="projectDetails">Hello, fill in here</div>
 
 
 
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
+                <div class="projectDisplayText">test</div>
             </div>
 
             <!--  Forth Row -->
 
             <div class="cardSlider">
                 <div class="jobSliderContainer" id="imageTrack">
+
                     <div class="card">
-                        <img>
-                        <p></p>
+                        <div class="cardHeader">
+                            <div>Mudbrick Vineyards</div>
+                            <img src="./resources/images/Mudbrick.jpg">
+                            <div>Worked: December 2016- October 2017 & March 2019 - September 2022</div>
+                        </div>
+                        <pre>
+                            Menu costing and development, 
+                            Hiring and rostering, 
+                            Developing young chefs and kitchen hands, 
+                            Inventory control, Food purchasing.
+                        </pre>
                     </div>
+
                     <div class="card">
-                        <img>
-                        <p></p>
+                        <div class="cardHeader">
+                            <div>Fairmont Hotel Vancouver Airport</div>
+                            <img src="./resources/images/FVA.jpg">
+                            <div>Worked: March 2018 - March 2019</div>
+                        </div>
+                        <pre>
+                            Running service in a la carte kitchen, 
+                            Collaborating in menu development, 
+                            Back of house ‘sustainability committee’ representative
+                        </pre>
                     </div>
+
                     <div class="card">
-                        <img>
-                        <p></p>
+                        <div class="cardHeader">
+                            <div>Hamilton Island Resorts</div>
+                            <img src="./resources/images/Hamilton-Island.jpg">
+                            <div>Worked: October 2015 - June 2016</div>
+                        </div>
+                        <pre>
+                            Running service in an a la carte kitchen, 
+                            Developing young staff, 
+                            Food purchasing, 
+                            running daily specials and supervising a kitchen team
+                        </pre>
                     </div>
+
                     <div class="card">
-                        <img>
-                        <p></p>
+                        <div class="cardHeader">
+                            <div>Sequoia Company of Restaurants</div>
+                            <img src="./resources/images/Cardero's.jpg">
+                            <div>Worked: February 2011 - August 2015</div>
+                        </div>
+                        <pre>
+                            Started as prep chef in 2011 and advanced to role as Sous chef in 2013
+                            Running service in high volume kitchen, 
+                            Invoicing, 
+                            Food Purchasing
+                        </pre>
                     </div>
-                    <div class="card">
-                        <img>
-                        <p></p>
-                    </div>
-                    <div class="card">
-                        <img>
-                        <p></p>
-                    </div>
-                    <div class="card">
-                        <img>
-                        <p></p>
-                    </div>
+
                 </div>
             </div>
 
@@ -147,12 +207,12 @@
 
         /*
 
-        
+        Project Photo Slideshow
 
         */
 
         let slideIndex = 1;
-        showSlides(slideIndex)
+        showSlides(slideIndex);
 
 
         function plusSlides(n) {
@@ -167,21 +227,20 @@
         function showSlides(n) {
             let i;
             let slides = document.getElementsByClassName('slideCard');
-            let dots = document.getElementsByClassName('dot')
-
+            let dots = document.getElementsByClassName('dot');
             if (n > slides.length) {slideIndex = 1};
             if (n < 1) {slideIndex = slides.length};
-
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             };
 
             for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active ", "");
+                dots[i].className = dots[i].className.replace(" active", "");
+                // dots[i].className = dots[i].className.replace(" active", "");
             };
 
             slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += "active";
+            dots[slideIndex-1].className += " active";
         }
 
 
@@ -223,9 +282,7 @@
             const walk = (x - startX) * 1;
             slider.scrollLeft = scrollLeft - walk;
             console.log(walk);
-
-
-
-
-        });</script>
+        });
+        
+    </script>
 </html>

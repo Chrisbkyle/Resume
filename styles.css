@@ -217,16 +217,36 @@ body {
 /* ------------------------ Project Display ------------------------ */
 
 .projectDisplay {
+    display: flex;
     border: 1px solid black;
     grid-column: 1 / 12;
-    height: 500px;
+    height: 600px;
+}
+
+.projectDisplayIntro {
+    display: flex;
+    flex-direction: column;
+}
+
+.projectTitle {
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
 }
 
 .slideshowContainer {
+    width: 100%;
     max-width: 500px;
     position: relative;
     margin: auto;
 }
+
+.projectDetails {
+    color: white;
+    background-color: black;
+    height: 40%;
+}
+
 
 .slideCard {
     display: none;
@@ -234,7 +254,7 @@ body {
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 55%;
     width: auto;
     margin-top: -22px;
     padding: 16px;
@@ -257,7 +277,7 @@ body {
     font-size: .75rem;
     padding: .5rem .75rem;
     position: absolute;
-    top: 0;
+    bottom: 8px;
 }
 .text {
     color: black;
@@ -271,6 +291,23 @@ body {
 .slideshowPhoto {
     width: 100%;
     aspect-ratio: 16 / 9;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.slideshowContainer > .active, .dot:hover {
+  background-color: #717171;
+}
+.projectDisplayText {
+    width: 75%;
 }
 
 
@@ -290,20 +327,37 @@ body {
 
     overflow-x: auto;
     overscroll-behavior-inline: contain;
-    overflow: hidden;
+    /* overflow: hidden; */
 
 }
 
 .card {
-    padding: 1rem;
+    /* padding: 1rem; */
     border: 1px solid black;
     border-radius: 5%;
     height: 400px;
     margin: 1rem;
+    background: linear-gradient(90deg, rgb(0,0,0) 50%, rgb(100,100,100)50%)
 }
 
-.card > img {
-    inline-size: 100%;
+.card > pre {
+    display:contents ;
+    float: right;
+    margin: 5%; 
+    white-space: normal;
+
+}
+
+.cardHeader {
+    float: left;
+    width: 50%;
+    height: 100%;
+    /* background-color: black; */
+    color: white;
+}
+
+.cardHeader > img {
+    width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
 }
