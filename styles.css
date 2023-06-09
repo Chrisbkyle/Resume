@@ -1,22 +1,24 @@
-/* 
-    #F36259
-    #EED8C7
-    #6259f3
+
+:root{
+    /* redish */
+    --secondary: #F36259;
+    /* blueish */
+    --main: #6259f3;
+    /* light */
+    --light: #EED8C7;
+}
 
 
 
-
-*/
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Patua+One&display=swap');
 
 * {
     box-sizing: border-box;
-    font-family: 'PT Serif', serif;
+    font-family: 'Kanit', sans-serif;
 }
-
 body {
     margin: 0;
-    font-family: 'PT Serif', serif;
+    font-family: 'Kanit', sans-serif;
     /* background-color: #EED8C7; */
 }
 
@@ -29,41 +31,127 @@ body {
 /* --------------------- Header Row --------------------- */
 
 .headerContent {
-    grid-column:1 / 11;
-    background-color: #F36259;
+    position: relative;
+    background: linear-gradient(90deg, var(--main)66.67%, var(--secondary)33.33%);
+    height: 100vh;
+    width: 100vw;
 }
 .titleName {
-    text-align: center;
-    font-size: 3rem;
-    margin: 4% 0 0 0;
+    font-size: 4rem;
+    position: absolute;
+    top: 5%;
+    bottom: 0;
+    left: 10%;
+    right: 0; 
+}
+.titleIntro {
+    font-size: 2rem;
+    position: absolute;
+    top: 18%;
+    bottom: 0;
+    left: 15%;
+    right: 0; 
 }
 .titleDescriptor {
-    font-size: 2rem;
-    text-align: center;
+    font-size: 1.5rem;
+    width: 40%;
+    text-align: justify;
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    left: 10%;
+    right: 0; 
 }
 .titleButtonContainer {
-    margin:  2% auto;
-    height: 40px;
-    width: 112px;
+    position: absolute;
+    top: 85%;
+    bottom: 0;
+    left: 25%;
+    right: 0; 
+}
+
+.titleButtonContainer > button {
+    padding: .25%;
+    border-radius: 15%;
+    margin-left: 1%;
 }
 .profilePicture {
-    background-color: #F36259;
-    grid-column: 11 / 12;
-    border: 1px solid black;
+    position: absolute;
+    padding: auto;
+    background-color: var(--main);
     border-radius: 100%;
     align-items: center;
+    top: 30%;
+    bottom: 0;
+    left: 59%;
+    right: 0; 
 }
-
-/* --------------------- BAGS Statement --------------------- */
-
-.bagsStatementContainer {
-    grid-column: 1 / 12;
-    height: 500px;
+.techStackToggle {
+    list-style-type: none;
+    position: absolute;
+    top: 5%;
+    bottom: 0;
+    left: 85%;
+    right: 0; 
 }
-.bagsStatement {
+.techStackToggleButton {
+    position: absolute;
+    background-color: var(--light);
+    border: 1px solid black;
+    height: 50px;
+    width: 10vw;
+    border-radius: 50em;
+    box-shadow: 2px 2px;
+    font-size: 1rem;
+    padding: 8px;
     text-align: center;
-    margin: 10%;
-    font-size: 2rem;
+    transition-duration: 1s;
+    z-index: 1;
+}
+
+.techStackInfo {
+    position: absolute;
+    background-color: var(--light);
+    width: 10vw;
+    height: 50px;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 50em;
+    transition: 1.5s;
+    z-index: -1;
+}
+.techStackInfo.one {
+    transform: translateY(100%); 
+}
+.techStackInfo.two {
+    transform: translateY(200%); 
+}
+.techStackInfo.three {
+    transform: translateY(300%); 
+}
+.techStackInfo.four {
+    transform: translateY(400%); 
+}
+.techStackInfo.five {
+    transform: translateY(500%); 
+}
+.techStackInfo.six {
+    transform: translateY(600%); 
+}
+.techStackInfo.seven {
+    transform: translateY(700%); 
+}
+.techStackInfo.eight {
+    transform: translateY(800%); 
+}
+.techStackInfo.nine {
+    transform: translateY(900%); 
+}
+.techStackInfo.ten {
+    transform: translateY(1000%); 
+}
+.techStackInfo > img {
+    border-radius: 100%;
 }
 
 /* --------------------- Skills/Tech Stack Row --------------------- */
@@ -71,7 +159,7 @@ body {
 .skillsContainer {
     position: relative;
     grid-column: 1 / 10;
-    background-color: #6259f3;
+    /* background-color: #6259f3; */
     height: 600px;
     /* border: 1px solid black; */
 }
@@ -220,26 +308,29 @@ body {
 
 .projectDisplay {
     display: flex;
-    border: 1px solid black;
     grid-column: 1 / 12;
     height: 600px;
 }
 
 .projectDisplayIntro {
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     width: 650px;
 }
 
 .projectTitle {
-    /* font-size: 1.5rem; */
-    background-color: black;
-    color: white;
+    border: 1px solid black;
+    background-color: var(--main);
+    height: 15%;
+    margin: 0;
 }
 
 .slideshowContainer {
+    height:85%;
+    background-color: var(--main);
+    border: 1px solid black;
     width: 100%;
-    /* max-width: 650px; */
     position: relative;
     margin: auto;
 }
@@ -315,7 +406,10 @@ body {
 
 /* ------------------------ Education ------------------------ */
 
-
+.educationContainer {
+    background-color: var(--secondary);
+    grid-column: 1 / 12;
+}
 
 /* ------------------------ Awards Display ------------------------ */
 
@@ -350,7 +444,7 @@ body {
     border-radius: 5%;
     height: 400px;
     margin: 1rem;
-    background: linear-gradient(90deg, rgb(0,0,0) 50%, rgb(100,100,100)50%)
+    background: linear-gradient(90deg, var(--main)50%, var(--light)50%)
 }
 
 .card > pre {
@@ -366,7 +460,6 @@ body {
     width: 50%;
     height: 100%;
     /* background-color: black; */
-    color: white;
 }
 
 .cardHeader > img {

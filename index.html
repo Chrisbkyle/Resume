@@ -17,26 +17,41 @@
             <div class="headerContent">
                 <div class="titleTextContainer">
                     <h1 class="titleName">Christopher Kyle</h1>
-                    <h3 class="titleDescriptor">Junior Software developer in training</h3>
+                    <h3 class="titleIntro">Junior Software developer in training</h3>
+                    <p class="titleDescriptor">
+                        With 16 years working in the highly technical Culinary Arts 
+                        I’ve developed good knowledge for the ins and outs of running a business, 
+                        and a knack for collaboration and problem solving.  
+                        I have recently completed a software engineering program with an AUT accredited company, 
+                        gaining valuable hands-on technical skills and the workings of the IT industry.  
+                        I am eager to take these skills and apply them in a junior role in the IT industry.  
+                        I can bring a strong work ethic, a passion for learning and problem solving skills to a team
+                    </p>
+                
+                    <div class="titleButtonContainer">
+                        <button><img src="./resources/images/linkedin.png" height="40px" width="40px"></button><button><img src="./resources/images/github-mark.png" height="40px" width="40px"></button>
+                    </div>
                 </div>
-                <div class="titleButtonContainer">
-                    <button><img src="./resources/images/linkedin.png" height="40px" width="40px"></button><button><img src="./resources/images/github-mark.png" height="40px" width="40px"></button>
-                </div>
+                <img src="./resources/images/Shutterstock_272552858.jpg" width="300px" height="300px" class="profilePicture">
+                <ul class="techStackToggle">
+                    <div class="techStackToggleButton">Tech Stack used</div>
+                    <li class="techStackInfo"><img src="./resources/images/html-5.png" height="50px" width="50px"><span>HTML</span></li>
+                    <li class="techStackInfo"><img src="./resources/images/css.png" height="50px" width="50px"><span>CSS</span></li>
+                    <li class="techStackInfo"><img src="./resources/images/javascript-icon-png-9.jpg" height="50px" width="50px"><span>JavaScript</span></li>
+                    <li class="techStackInfo"><img src="./resources/images/React-icon.svg.png" height="50px" width="50px"><span>React</span></li>
+                    <li class="techStackInfo"><img src="./resources/images/320px-Node.js_logo.svg.png" height="50px" width="50px"><span>NodeJS</span></li>
+                    <li class="techStackInfo"><img src="./resources/images/figma.png" height="50px" width="50px"><span>Figma</span></li>
+                    <li class="techStackInfo"><img src="./resources/images/mysql-logo-png-transparent.png" height="50px" width="50px"><span>mySQL</span></li>
+                    <li class="techStackInfo"><img src="./resources/images/Docker_(container_engine)_logo_(cropped).png" height="50px" width="50px"><span>Docker</span></li>
+                    <li class="techStackInfo"><img src="./resources/images/ec2-logo.png" height="50px" width="50px">EC2</span></li>
+                    <li class="techStackInfo"><img src="./resources/images/github-mark.png" height="50px" width="50px"><span>Git & Github</span></li>
+
+                </ul>
             </div>
 
-            <div style="background-color: #F36259">
-                <img src="./resources/images/Shutterstock_272552858.jpg" width="300px" height="300px" class="profilePicture">
-            </div>
+
 
             <!--  Second Row -->
-
-            <div class="bagsStatementContainer">
-                
-                <p class="bagsStatement">
-                    With 16 years working in the highly technical Culinary Arts I’ve developed good knowledge for the ins and outs of running a business, and a knack for collaboration and problem solving.  I have recently completed a software engineering program with an AUT accredited company, gaining valuable hands-on technical skills and the workings of the IT industry.  I am eager to take these skills and apply them in a junior role in the IT industry.  I can bring a strong work ethic, a passion for learning and a can-do attitude to any team.
-                </p>
-
-            </div>
 
             <div class="skillsContainer">
                 <div class="diamond1">Creative Problem Solver</div>
@@ -45,7 +60,7 @@
                 <div class="diamond4">d</div>
                 <div class="diamond5">e</div>
             </div>
-            <div class="techStackContainer">
+            <!-- <div class="techStackContainer">
                 <div class="techStackLogos">
                     <img src="./resources/images/html-5.png">
                     <span>html</span>
@@ -79,7 +94,7 @@
                     <img src="./resources/images/ec2-logo.png">
                     <span>ec2</span>
                 </div>
-            </div>
+            </div> -->
 
             <!--  Third Row -->
 
@@ -124,12 +139,14 @@
 
 
                 </div>
-                <div class="projectDisplayText">test</div>
+                <div class="projectDisplayText">
+                    <div>Office Chef is a simple responsive Web application meant to be used in today's professional Kitchens</div>
+                </div>
             </div>
 
             <!--  Forth Row -->
 
-            <div class="Education container">Education</div>
+            <div class="educationContainer">Education</div>
 
             <!--  Fifth Row -->
 
@@ -216,6 +233,37 @@
     </body>
 
     <script>
+
+        /*
+            
+            Tech Stack Toggle
+
+        */
+
+        let button = document.querySelectorAll('.techStackToggleButton');
+        let list = document.querySelectorAll('.techStackInfo');
+        let slideActive = false;
+        let arr = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
+
+        button.forEach((card) => {
+
+            card.addEventListener('click', function() {
+
+                slideActive === false ? slideActive = true : slideActive = false;
+
+                if (slideActive === true) {
+                    for (i = 0; i < list.length; i++) {
+                        list[i].style.zIndex = 1;
+                        list[i].classList.toggle(arr[i])
+                    }
+                } else {
+                    for (i = 0; i < list.length; i++){
+                        list[i].classList.toggle(arr[i])
+                        list[i].style.zIndex = 0;
+                    }
+                }
+            })
+        })
 
         /*
 
