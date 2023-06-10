@@ -36,16 +36,16 @@
                 <ul class="techStackToggle">
                     <li class="techStackToggleButton">Tech Stack used</li>
                     <li class="techStackInfoHolder">
-                        <div class="techStackInfo"><img src="./resources/images/html-5.png" height="50px" width="50px"><span>HTML</span></div>
-                        <div class="techStackInfo"><img src="./resources/images/css.png" height="50px" width="50px"><span>CSS</span></div>
-                        <div class="techStackInfo"><img src="./resources/images/javascript-icon-png-9.jpg" height="50px" width="50px"><span>JavaScript</span></div>
-                        <div class="techStackInfo"><img src="./resources/images/React-icon.svg.png" height="50px" width="50px"><span>React</span></div>
-                        <div class="techStackInfo"><img src="./resources/images/320px-Node.js_logo.svg.png" height="50px" width="50px"><span>NodeJS</span></div>
-                        <div class="techStackInfo"><img src="./resources/images/figma.png" height="50px" width="50px"><span>Figma</span></div>
-                        <div class="techStackInfo"><img src="./resources/images/mysql-logo-png-transparent.png" height="50px" width="50px"><span>mySQL</span></div>
-                        <div class="techStackInfo"><img src="./resources/images/Docker_(container_engine)_logo_(cropped).png" height="50px" width="50px"><span>Docker</span></div>
-                        <div class="techStackInfo"><img src="./resources/images/ec2-logo.png" height="50px" width="50px">EC2</span></div>
-                        <div class="techStackInfo"><img src="./resources/images/github-mark.png" height="50px" width="50px"><span>Git & Github</span></div>
+                        <div class="techStackInfo"><img src="./resources/images/html-5.png" height="50px" width="50px"><div>HTML</div></div>
+                        <div class="techStackInfo"><img src="./resources/images/css.png" height="50px" width="50px"><div>CSS</div></div>
+                        <div class="techStackInfo"><img src="./resources/images/javascript-icon-png-9.jpg" height="50px" width="50px"><div>JavaScript</div></div>
+                        <div class="techStackInfo"><img src="./resources/images/React-icon.svg.png" height="50px" width="50px"><div>React</div></div>
+                        <div class="techStackInfo"><img src="./resources/images/320px-Node.js_logo.svg.png" height="50px" width="50px"><div>NodeJS</div></div>
+                        <div class="techStackInfo"><img src="./resources/images/figma.png" height="50px" width="50px"><div>Figma</div></div>
+                        <div class="techStackInfo"><img src="./resources/images/mysql-logo-png-transparent.png" height="50px" width="50px"><div>mySQL</div></div>
+                        <div class="techStackInfo"><img src="./resources/images/Docker_(container_engine)_logo_(cropped).png" height="50px" width="50px"><div>Docker</div></div>
+                        <div class="techStackInfo"><img src="./resources/images/ec2-logo.png" height="50px" width="50px"><div>EC2</div></div>
+                        <div class="techStackInfo"><img src="./resources/images/github-mark.png" height="50px" width="50px"><div>Git & Github</div></div>
                     </li>
 
                 </ul>
@@ -275,13 +275,13 @@
 
                 if(isActive === true) {
                     console.log(isActive)
-                    menu.forEach(e => e.style.height = '500px')
+                    menu.forEach(e => e.style.display = 'flex')
                     list.forEach(e => e.style.position = 'relative')
                     button.forEach(e => e.style.borderRadius = '1em 1em 0 0 ')
                 } else {
                     console.log(isActive)
-                    menu.forEach(e => e.style.height = '0px')
-                    list.forEach(e => e.style.zIndex = 'absolute')
+                    menu.forEach(e => e.style.display = 'none')
+                    list.forEach(e => e.style.position = 'absolute')
                     button.forEach(e => e.style.borderRadius = '1em')
                 }
              })

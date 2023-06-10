@@ -107,11 +107,11 @@ body {
 
 .techStackInfoHolder {
     position: relative;
-    border: 1px solid black;
-    display: flex;
+    /* border: 1px solid black; */
+    display: none;
     flex-direction: column;
     border-radius: 0em 0em 1em 1em;
-    height: 0;
+    height: 500px;
     width: 10vw;
     transition: 1s;
     background-color: var(--light);
@@ -119,16 +119,22 @@ body {
 }
 
 .techStackInfo {
-    position: absolute;
+    position: relative;
     background-color: var(--light);
     width: 10vw;
     height: 10%;
+    display: flex;
     border: 1px solid black;
-    /* z-index: -1; */
 }
 
 .techStackInfo:last-of-type {
     border-radius: 0 0 1em 1em;
+}
+
+.techStackInfo > div {
+    text-align: center;
+    font-size: 1.25rem;
+    width: 100%;
 }
 
 
