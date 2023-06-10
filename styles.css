@@ -23,9 +23,49 @@ body {
 }
 @media screen and (max-width: 1200px) {
     body {font-size: 80%;}
-  }
+}
 
 /* --------------------- Header Row --------------------- */
+.contact {
+    background-color: var(--light);
+    margin: 0;
+    padding: .5em;
+    box-shadow: 2px 2px;
+    border-radius: .5em;
+    /* border: 1px solid black;  */
+    list-style-type: none;
+    font-weight: 600;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.contactItems {
+    margin: 0 1em;
+    float: right;
+    display: none;
+}
+.contact:hover {
+    background-color: var(--light);
+}
+.contact:hover > li {
+    display: list-item;
+}
+
+.titleButtonContainer {
+    width: 8em;
+    position: absolute;
+    top: 0;
+    right: 0; 
+}
+.titleButtonContainer > button {
+    background-color: var(--light);
+    font-size: 1em;
+    width: 8em;
+    padding: .25% 0;
+    border-radius: .5em;
+    margin-left: 1%;
+    box-shadow: 2px 2px;
+}
 
 .headerContent {
     position: relative;
@@ -62,19 +102,7 @@ body {
     left: 10%;
     right: 0; 
 }
-.titleButtonContainer {
-    position: absolute;
-    top: 7.5%;
-    bottom: 0;
-    left: 60%;
-    right: 0; 
-}
 
-.titleButtonContainer > button {
-    padding: .25%;
-    border-radius: 15%;
-    margin-left: 1%;
-}
 .profilePicture {
     position: absolute;
     border-radius: 100%;
@@ -88,9 +116,6 @@ body {
     border: 1px solid black;
     box-shadow: 2px 2px;
 }
-
-
-
 .techStackHolder {
     list-style-type: none;
     position: absolute;
@@ -99,20 +124,15 @@ body {
     top: 80%;
     left: 10%;
 }
-
 .techStackInfo {
     background-color: var(--light);
     border-radius: 25%;
 }
-
 .techStackInfo > div {
     display: none;
     text-align: center;
     width: 100%;
 }
-
-
-
 .techStackInfo > img {
     height: 45px;
     width: 45px;
@@ -131,35 +151,27 @@ Project Card
     border-top: 5px solid var(--main);
     border-bottom: 5px solid var(--main);
 }
-
-
 .projectCardHolder {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     gap: 15%;
     margin: 5% 15%;
-    /* border: 1px solid black; */
-
 }
-
 .projectCard {
     border-radius: 15px;
     box-shadow: 2px 2px black;
     height: 450px;
     width: 29.5vw;
     border: 2px solid var(--main);
-    /* background: var(--light) */
 }
-
 .projectTitle {
     background-color: var(--secondary);
     padding: 5% 0;
     margin: 0 0 5% 0;
     text-align: center;
     font-size: 2em;
-    border-radius: 13px 13px 0 0;
-    
+    border-radius: 13px 13px 0 0; 
 }
 .photoContainer {
     height: 45%;
@@ -198,15 +210,67 @@ Project Card
 /* --------------------- Everything Else --------------------- */
 
 .everyThingElse {
-    background-color: var(--main);
-    width: 100vw;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: calc(25% - .75em) calc(25% - .75em) calc(25% - .75em) calc(25% - .75em);
+    gap: 1em;
+    margin: 1em;
+    grid-template-rows: auto;
     height: 80vh;
 }
-
+.aboutMe {
+    padding: 1em;
+    border-radius: 15px;
+    background-color: var(--secondary);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* border: 1px solid black; */
+}
+.aboutMe > h2 {
+    margin: 0;
+}
+.education {
+    padding: 1em;
+    border-radius: 15px;
+    background-color: var(--main);
+    grid-column-start: 3;
+    grid-column-end: 5;
+    display: flex;
+    /* border: 1px solid black; */
+}
+    .educationLeft {
+        padding:.5em;
+        width: 50%;
+        /* border: 1px solid black; */
+    }
+    .educationLeft > h2 {
+        margin: 0;
+    }
+    .educationRight {
+        padding:.5em;
+        width: 50%;
+        /* border: 1px solid black; */
+    }
+    .educationRight > h4 {
+        margin: 0;
+    }
+.achievements {
+    padding: 1em;
+    border-radius: 15px;
+    background-color: var(--main);
+    /* border:1px solid black; */
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.achievements > h2 {
+    margin: 0;
+}
     .cardSlider {
+        border-radius: 15px;
+        grid-column-start: 2;
+        grid-column-end: 5;
         background-color: var(--light);
-        width: 75vw;
-        border: 1px solid black;
+        width: 100%;
         height: 350px;
     }
     .jobSliderContainer {
@@ -218,11 +282,11 @@ Project Card
         overscroll-behavior-inline: contain;
     }
     .card {
-        border: 1px solid black;
+        /* border: 1px solid black; */
         border-radius: 5%;
         height: 300px;
         margin: 1em;
-        background: linear-gradient(90deg, var(--main)50%, rgb(255,255,255) 50%);
+        background: linear-gradient(90deg, var(--main)50%, var(--secondary) 50%);
         box-shadow: 2px 2px;
     }
     .card > pre {
@@ -241,13 +305,13 @@ Project Card
         aspect-ratio: 16 / 9;
         object-fit: cover;
     }
+
 /* --------------------- Skills/Tech Stack Row --------------------- */
 
 .skillsContainer {
     position: relative;
     height: 600px;
 }
-
 .skillsContainer > div {
     position: absolute;
     margin: auto auto 5% auto ;
