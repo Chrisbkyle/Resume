@@ -8,7 +8,7 @@
     --light: #EED8C7;
 }
 /* 473dc9 */
-
+/* 2fa3ac */
 
 @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Patua+One&display=swap');
 
@@ -93,12 +93,6 @@ body {
     display: list-item;
 }
 
-/* .titleButtonContainer {
-    width: 8em;
-    position: absolute;
-    top: 0;
-    right: 0; 
-} */
 .personalLinkedin {
     position: absolute;
     top: 25%;
@@ -128,7 +122,7 @@ body {
     border: 1px solid black; 
     position: relative;
     background-color: var(--main);
-    height: 70vh;
+    height: 60vh;
     width: 60vw;
     margin: 10vh 20vw;
     border-radius: 1em;
@@ -137,7 +131,7 @@ body {
 .titleName {
     font-size: 3em;
     position: absolute;
-    top: 0%;
+    top: 3%;
     bottom: 0;
     left: 10%;
     right: 0; 
@@ -145,20 +139,25 @@ body {
 .titleIntro {
     font-size: 2em;
     position: absolute;
-    top: 10%;
+    top: 17%;
     bottom: 0;
     left: 15%;
     right: 0; 
 }
 .titleDescriptor {
-    font-size: 1.2em;
-    width: 60%;
+    font-size: 1.5em;
+    width:38%;
     text-align: justify;
     position: absolute;
     top: 30%;
     bottom: 0;
-    left: 10%;
+    left: 20%;
     right: 0; 
+}
+.techStackUsed {
+    position: absolute;
+    top: 62%;
+    left: 6%;
 }
 
 .profilePicture {
@@ -178,23 +177,40 @@ body {
     list-style-type: none;
     position: absolute;
     display: flex;
-    gap: .5em;
-    top: 80%;
-    left: 10%;
+    gap: 1em;
+    top: 75%;
+    left: 5%;
 }
-.techStackInfo {
+.techStackName {
+    font-size: 1.2em;
+    position: absolute;
+    top: -22px;
+    z-index: -5;
     background-color: var(--light);
-    border-radius: 25%;
-}
-.techStackInfo > div {
-    display: none;
     text-align: center;
-    width: 100%;
+    padding: .1em;
+    width: 7em;
+    border-radius: 5px 5px 5px 0;
+    box-shadow: 2px 0;
 }
-.techStackInfo > img {
+.techStackImg {
+    background-color: var(--light);
+    border-radius: 15px;
     height: 45px;
     width: 45px;
     border-radius: 25%;
+    transition: .25s;
+    box-shadow: 2px 2px;
+}
+.techStackImg:hover {
+    border-radius: 0px 0px 15px 15px;
+}
+.techStackInfo {
+    position: relative;
+}
+.techStackInfo:hover > .techStackName {
+    z-index: 1;
+    /* position:relative; */
 }
 
 /*
@@ -209,7 +225,6 @@ Project Card
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 1px solid black;
     display: grid;
     grid-template-columns: auto auto;
     grid-auto-rows: auto;
