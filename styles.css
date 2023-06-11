@@ -1,13 +1,13 @@
 
 :root{
     /* redish */
-    --secondary: #F36259;
+    --secondary: #ac382f;
     /* blueish */
-    --main: #6259f3;
+    --main: #473dc9;
     /* light */
     --light: #EED8C7;
 }
-
+/* 473dc9 */
 
 
 @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Patua+One&display=swap');
@@ -21,8 +21,51 @@ body {
     margin: 0;
     font-family: 'Kanit', sans-serif;
 }
+@media screen and (max-width: 1550px) {
+    body {font-size: 85%;}
+}
 @media screen and (max-width: 1200px) {
-    body {font-size: 80%;}
+    body {font-size: 75%;}
+}
+.box {
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 15px;
+    box-shadow: 2px 2px;
+    z-index: -1;
+}
+
+.blueOne {
+    height: 15em;
+    width: 10em;
+    background-color: var(--main);
+}
+.blueTwo {
+    height: 10em;
+    width: 22em;
+    background-color: var(--main);
+}
+.blueThree {
+    height: 8em;
+    width: 16em;
+    background-color: var(--main);
+}
+
+
+.redOne {
+    height: 10em;
+    width: 12em;
+    background-color: var(--secondary);
+}
+.redTwo {
+    height: 14em;
+    width: 6em;
+    background-color: var(--secondary);
+}
+.redThree {
+    height: 6em;
+    width: 8em;
+    background-color: var(--secondary);
 }
 
 /* --------------------- Header Row --------------------- */
@@ -32,7 +75,6 @@ body {
     padding: .5em;
     box-shadow: 2px 2px;
     border-radius: .5em;
-    /* border: 1px solid black;  */
     list-style-type: none;
     font-weight: 600;
     position:absolute;
@@ -51,13 +93,28 @@ body {
     display: list-item;
 }
 
-.titleButtonContainer {
+/* .titleButtonContainer {
     width: 8em;
     position: absolute;
     top: 0;
     right: 0; 
+} */
+.personalLinkedin {
+    position: absolute;
+    top: 25%;
+    left: 90%;
+    background-color: var(--light);
+    font-size: 1em;
+    width: 8em;
+    padding: .25% 0;
+    border-radius: .5em;
+    margin-left: 1%;
+    box-shadow: 2px 2px;
 }
-.titleButtonContainer > button {
+.personalGithub {
+    position: absolute;
+    top:70%;
+    left: 85%;
     background-color: var(--light);
     font-size: 1em;
     width: 8em;
@@ -68,6 +125,7 @@ body {
 }
 
 .headerContent {
+    border: 1px solid black; 
     position: relative;
     background-color: var(--main);
     height: 70vh;
@@ -147,11 +205,17 @@ Project Card
 
 
 .projectCardHolder {
+    background-image: url(./resources/images/Background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border: 1px solid black;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    margin: 5% 0;
+    grid-auto-rows: auto;
+    padding: 0 15%;
+    margin: 15% 0 5% 0;
+    row-gap: 10em;
 }
 .projectCard {
     margin: auto;
@@ -160,6 +224,7 @@ Project Card
     height: 450px;
     width: 400px;
     border: 2px solid var(--main);
+    background-color: var(--light);
 }
 .projectTitle {
     background-color: var(--secondary);
@@ -170,7 +235,7 @@ Project Card
     border-radius: 13px 13px 0 0; 
 }
 .photoContainer {
-    height: 45%;
+    height: 180px;
     width: 75%;
     margin: 5% auto 0 auto;
 }
@@ -183,6 +248,7 @@ Project Card
     box-shadow: 2px 2px;
 }
 .projectDescription {
+    height: 80px;
     padding: 2% 5%;
     font-size: 1em;
 }
@@ -192,6 +258,7 @@ Project Card
     align-items: center;
 }
 .buttonHolder{
+    height: 50px;
     margin: auto;
 }
 .projectCardButtons {
@@ -262,6 +329,7 @@ Project Card
     background-color: var(--main);
     grid-column-start: 1;
     grid-column-end: 2;
+    height: 350px;
 }
 .achievements > h2 {
     margin: 0;
@@ -314,121 +382,3 @@ Project Card
     .jobCardText {
         margin: 5%;
     }
-
-/* --------------------- Skills/Tech Stack Row --------------------- */
-
-.skillsContainer {
-    position: relative;
-    height: 600px;
-}
-.skillsContainer > div {
-    position: absolute;
-    margin: auto auto 5% auto ;
-    background-color: #EED8C7;
-    height: 100px;
-    width: 100px;
-    box-shadow: 2px 2px rgba(0 ,0, 0, .5);
-}
-
-    /* --------------------- Diamond one --------------------- */
-
-    .skillsContainer:not(:hover) div:nth-child(1) {
-        transform: rotate(25deg); 
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        transition-duration: 2s;
-    }
-    .skillsContainer:hover div:nth-child(1) {
-        transform: rotate(0deg); 
-        top: 0; 
-        bottom: 30%; 
-        right: 50%; 
-        left: 0;
-        transition-duration: 2s;
-    }
-
-
-    /* --------------------- Diamond two --------------------- */
-
-    .skillsContainer:hover div:nth-child(2) {
-        transform: rotate(0deg); 
-        top: 0; 
-        bottom: 30%; 
-        right: 25%; 
-        left: 0;
-        transition-duration: 2s;
-    }
-    .skillsContainer:not(:hover) div:nth-child(2) {
-        transform: rotate(35deg); 
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        transition-duration: 2s;
-    }
-
-
-    /* --------------------- Diamond three --------------------- */
-
-    .skillsContainer:hover div:nth-child(3) { 
-        transform: rotate(0deg); 
-        top: 0; 
-        bottom: 30%; 
-        right: 0; 
-        left: 0;
-        transition-duration: 2s;
-    }
-    .skillsContainer:not(:hover) div:nth-child(3) {
-        transform: rotate(45deg); 
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        transition-duration: 2s;
-    }
-
-
-    /* --------------------- Diamond four --------------------- */
-
-    .skillsContainer:hover div:nth-child(4){ 
-        transform: rotate(0deg); 
-        top: 0; 
-        bottom: 30%; 
-        right: 0; 
-        left: 25%;
-        transition-duration: 2s;
-    }
-    .skillsContainer:not(:hover) div:nth-child(4) {
-        transform: rotate(55deg); 
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        transition-duration: 2s;
-    }
-
-
-    /* --------------------- Diamond five --------------------- */
-
-    .skillsContainer:hover div:nth-child(5){ 
-        transform: rotate(0deg); 
-        top: 0; 
-        bottom: 30%; 
-        right: 0; 
-        left: 50%;
-        transition-duration: 2s;
-    }
-    .skillsContainer:not(:hover) div:nth-child(5) {
-        transform: rotate(55deg); 
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        transition-duration: 2s;
-    }
-
-
-
-
