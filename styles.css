@@ -95,8 +95,8 @@ body {
 
 .personalLinkedin {
     position: absolute;
-    top: 25%;
-    left: 90%;
+    top: 78%;
+    right: 55%;
     background-color: var(--light);
     font-size: 1em;
     width: 8em;
@@ -107,8 +107,8 @@ body {
 }
 .personalGithub {
     position: absolute;
-    top:70%;
-    left: 85%;
+    top:78%;
+    left: 60%;
     background-color: var(--light);
     font-size: 1em;
     width: 8em;
