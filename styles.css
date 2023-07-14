@@ -20,20 +20,23 @@ body {
     font-size: 100%;
     margin: 0;
     font-family: 'Kanit', sans-serif;
+    width: 100%;
 }
-@media screen and (max-width: 1550px) {
-    body {font-size: 85%;}
-}
-@media screen and (max-width: 1200px) {
-    body {font-size: 75%;}
+
+/**/ 
+
+.box-container {
+    position: relative;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
 }
 .box {
     border: 1px solid black;
     position: absolute;
     border-radius: 15px;
     box-shadow: 2px 2px;
-    z-index: -1;
-    overflow: hidden;
 }
 
 .blueOne {
@@ -120,8 +123,10 @@ body {
 }
 
 .headerContent {
+    top: 0;
+    left: 0;
     border: 1px solid black; 
-    position: relative;
+    position: absolute;
     background-color: var(--main);
     height: 60vh;
     width: 60vw;
@@ -197,22 +202,32 @@ body {
 .techStackImg {
     background-color: var(--light);
     border-radius: 15px;
-    height: 45px;
     width: 45px;
     border-radius: 25%;
-    transition: .25s;
-    box-shadow: 2px 2px;
+    padding: auto 0px;
+
 }
-.techStackImg:hover {
+.techStackImgHolder:hover {
     border-radius: 0px 0px 15px 15px;
+}
+.techStackImgHolder {
+    width: 50px;
+    height: 50px;
+    background-color: var(--light);
+    border-radius: 25%;
+    box-shadow: 2px 2px; 
+    transition: .25s;
 }
 .techStackInfo {
     position: relative;
+    height: 55px;
+    width: 55px;
 }
 .techStackInfo:hover > .techStackName {
     z-index: 1;
     /* position:relative; */
 }
+
 
 /*
 
@@ -230,7 +245,7 @@ Project Card
     grid-template-columns: auto auto;
     grid-auto-rows: auto;
     padding: 0 15%;
-    margin: 15% 0 5% 0;
+    margin: 5% 0 5% 0;
     row-gap: 10em;
 }
 .projectCard {
@@ -403,4 +418,48 @@ Project Card
     }
     .jobCardText {
         margin: 5%;
+    }
+
+
+    @media screen and (max-width: 1550px) {
+        body {font-size: 85%;}
+    }
+    
+    @media screen and (max-width: 1200px) {
+        body {font-size: 75%;}
+    }
+    
+    @media screen and (max-width: 960px) {
+        .box {
+            display: none;
+        }
+        .box-container {
+            display:none;
+            width: 0vw;
+            height: 0vh;
+        }
+        .profilePicture {
+            display: none;
+        }
+        .headerContent {
+            margin: 0 auto 15% auto;
+            position: relative;
+            width: 100vw;
+            height: 50vh;
+        }
+        .personalLinkedin {
+            z-index: 1;
+            left: 85%;
+            top: 15%;
+        }
+        .personalGithub {
+            
+            z-index: 1;
+            top: 25%;
+            left: 85%;
+        }
+        .projectCardHolder {
+            grid-template-columns: auto;
+        }
+
     }
