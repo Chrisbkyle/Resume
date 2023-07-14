@@ -367,7 +367,7 @@ Project Card
     background-color: var(--main);
     grid-column-start: 1;
     grid-column-end: 2;
-    height: 350px;
+    max-height: 350px;
 }
 .achievements > h2 {
     margin: 0;
@@ -439,8 +439,12 @@ Project Card
     }
     /**/
     @media screen and (max-width: 960px) {
-        body {font-size: 85%;}
-        .techStackName { top: -22px;}
+        body {
+            font-size: 85%;
+        }
+        .techStackName { 
+            top: -22px;
+        }
         .box {
             display: none;
         }
@@ -456,10 +460,8 @@ Project Card
             margin: 10% auto 15% auto;
             position: relative;
             width: 100vw;
-            height: 60vh;
+            height: 50vh;
         }
-
-
         .personalLinkedin {
             z-index: 1;
             left: 85%;
@@ -478,6 +480,9 @@ Project Card
 @media screen and (max-width: 768px) {
     body {
         font-size: 75%;
+    }
+    .headerContent {
+        height: 40vh;
     }
     .titleName {
         position: relative;
@@ -510,29 +515,56 @@ Project Card
         margin-block-start: 0!important;
         padding-inline-start: 0!important;
     }
+    .everyThingElse {
+        grid-template-columns: 100%;
+        gap: 1em;
+        height: 80vh;
+    }
+    .aboutMe {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .education {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .achievements {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .cardSlider {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
 }
 /**/
 @media screen and (max-width: 480px) {
 
+
+    .headerContent {
+        margin: 10% auto 20% auto;
+        height: 40vh;
+    }
     .techStackHolder {
-            gap: 1.2em;
+            gap: 1.35em;
             left: 0%;
             margin-block-start: 0!important;
             padding-inline-start: .1em!important;
         }
         .personalLinkedin {
             z-index: 1;
-            top: 0;
-            left: 50%;
+            top: 46vh;
+            left: 20%;
         }
         .personalGithub {     
             z-index: 1;
-            top: 0;
-            left: 75%;
+            top: 46vh;
+            left: 55%;
         }
         .techStackInfo {
-            height: 32px;
-            width: 32px;
+            /* border: 1px solid black; */
+            height: 28px;
+            width: 28px;
         }
         
         .techStackName { 
@@ -540,7 +572,7 @@ Project Card
             box-shadow: 1px 0px;
         }
         .techStackNameRight {
-            right: -13px!important;
+            right: -15.5px!important;
             border-radius:  5px 5px 0 5px;
             box-shadow: -1px 0px;
         }
