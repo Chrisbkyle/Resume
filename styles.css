@@ -145,7 +145,7 @@ body {
     font-size: 3em;
     position: relative;
     margin: 0;
-    padding: 20px;
+    padding: 50px 50px 20px 50px;
     /* top: 3%;
     left: 10%; */
 }
@@ -153,7 +153,7 @@ body {
     font-size: 2em;
     position: relative;
     margin: 0;
-    padding: 0 20px;
+    padding: 0 50px;
     /* top: 17%;
     bottom: 0;
     left: 15%;
@@ -161,11 +161,11 @@ body {
 }
 .titleDescriptor {
     font-size: 1.5em;
-    width:60%;
+    width:80%;
     text-align: justify;
     position: relative;
     margin: 0;
-    padding: 5px 40px;
+    padding: 5px 60px;
     /* top: 30%;
     bottom: 0;
     left: 20%;
@@ -317,7 +317,7 @@ Project Card
     gap: 1em;
     margin: 1em;
     grid-template-rows: auto;
-    height: 80vh;
+    min-height: 80vh;
 }
 .aboutMe {
     box-shadow: 2px 2px;
@@ -460,20 +460,29 @@ Project Card
             margin: 10% auto 15% auto;
             position: relative;
             width: 100vw;
-            height: 50vh;
+            height: 40vh;
         }
         .personalLinkedin {
             z-index: 1;
             left: 85%;
-            top: 40%;
+            top: 20%;
         }
         .personalGithub {     
             z-index: 1;
-            top: 50%;
+            top: 30%;
             left: 85%;
         }
         .projectCardHolder {
             grid-template-columns: auto;
+        }
+        .everyThingElse {
+            min-height: 0vh;
+        }
+        .aboutMe {
+            height: 250px;
+        }
+        .education {
+            height: 250px;
         }
     }
     /**/
@@ -539,55 +548,62 @@ Project Card
 }
 /**/
 @media screen and (max-width: 480px) {
-
-
     .headerContent {
-        margin: 10% auto 20% auto;
+        margin: 10% auto 40% auto;
         height: 40vh;
     }
     .techStackHolder {
-            gap: 1.35em;
-            left: 0%;
-            margin-block-start: 0!important;
-            padding-inline-start: .1em!important;
-        }
-        .personalLinkedin {
-            z-index: 1;
-            top: 46vh;
-            left: 20%;
-        }
-        .personalGithub {     
-            z-index: 1;
-            top: 46vh;
-            left: 55%;
-        }
-        .techStackInfo {
-            /* border: 1px solid black; */
-            height: 28px;
-            width: 28px;
-        }
-        
-        .techStackName { 
-            top: -19px;
-            box-shadow: 1px 0px;
-        }
-        .techStackNameRight {
-            right: -15.5px!important;
-            border-radius:  5px 5px 0 5px;
-            box-shadow: -1px 0px;
-        }
-        .projectCardHolder {
-            display: grid;
-            grid-template-columns: auto;
-            grid-auto-rows: auto;
-            padding:0;
-            margin:0;
-            row-gap: 10em;
-        }
-        .projectCard {
-            width: 100%;
-            margin: 0em;
-        }
+        gap: 21px;
+        left: 0%;
+        margin-block-start: 0!important;
+        padding-inline-start: 0px!important;
+    }
+    .titleDescriptor {
+        width: 100%;
+        margin-top: 15px;
+    }
+    .personalLinkedin {
+        z-index: 1;
+        top: 35vh;
+        left: 20%;
+    }
+    .personalGithub {     
+        z-index: 1;
+        top: 35vh;
+        left: 55%;
+    }
+    .techStackUsed {
+        top: 42vh;
+    }
+    .techStackHolder {
+        top: 48vh;
+        gap: .5px;
+    }
+    .techStackImg {
+        height: 38px;
+        width: 38px;
+    }
+    .techStackName { 
+        top: -19px;
+        box-shadow: 0px 0px;
+    }
+    .techStackNameRight {
+        right: 7px!important;
+        border-radius:  5px 5px 0 5px;
+        box-shadow: 0px 0px;
+    }
+    .projectCardHolder {
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-rows: auto;
+        padding:0;
+        margin:0;
+        row-gap: 10em;
+    }
+    .projectCard {
+        width: 100%;
+        margin: 0em;
+    }
 
     
 
