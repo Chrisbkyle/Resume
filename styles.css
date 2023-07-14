@@ -187,6 +187,11 @@ body {
     top: 75%;
     left: 5%;
 }
+.techStackInfo {
+    position: relative;
+    height: 45px;
+    width: 45px;
+}
 .techStackName {
     font-size: 1.2em;
     position: absolute;
@@ -200,32 +205,21 @@ body {
     box-shadow: 2px 0;
 }
 .techStackImg {
+    margin: 2.5px;
+    margin: auto 0;
     background-color: var(--light);
     border-radius: 15px;
     width: 45px;
-    border-radius: 25%;
+    height: 45px;
+    border-radius: 15%;
     padding: auto 0px;
-
-}
-.techStackImgHolder:hover {
-    border-radius: 0px 0px 15px 15px;
-}
-.techStackImgHolder {
-    width: 50px;
-    height: 50px;
-    background-color: var(--light);
-    border-radius: 25%;
-    box-shadow: 2px 2px; 
     transition: .25s;
 }
-.techStackInfo {
-    position: relative;
-    height: 55px;
-    width: 55px;
+.techStackImg:hover {
+    border-radius: 0px 0px 15px 15px;
 }
 .techStackInfo:hover > .techStackName {
     z-index: 1;
-    /* position:relative; */
 }
 
 
@@ -442,24 +436,68 @@ Project Card
             display: none;
         }
         .headerContent {
-            margin: 0 auto 15% auto;
+            margin: 10% auto 15% auto;
             position: relative;
             width: 100vw;
-            height: 50vh;
+            height: 70vh;
         }
         .personalLinkedin {
             z-index: 1;
             left: 85%;
-            top: 15%;
+            top: 35%;
         }
-        .personalGithub {
-            
+        .personalGithub {     
             z-index: 1;
-            top: 25%;
+            top: 45%;
             left: 85%;
         }
         .projectCardHolder {
             grid-template-columns: auto;
         }
-
     }
+
+@media screen and (max-width: 768px) {
+    .headerContent {
+        background-color: pink;
+    }
+    .personalLinkedin {
+        z-index: 1;
+        left: 75%;
+        top: 35%;
+    }
+    .personalGithub {     
+        z-index: 1;
+        top: 45%;
+        left: 75%;
+    }
+    .techStackHolder {
+        gap: .5em;
+        margin-block-start: 0!important;
+        padding-inline-start: 0!important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .headerContent {
+            background-color: purple;
+        }
+
+    .techStackHolder {
+            gap: .25em;
+            left: 0%;
+            margin-block-start: 0!important;
+            padding-inline-start: .25em!important;
+        }
+        .personalLinkedin {
+            z-index: 1;
+            top: 0;
+            left: 50%;
+        }
+        .personalGithub {     
+            z-index: 1;
+            top: 0;
+            left: 75%;
+        }
+    
+
+}
