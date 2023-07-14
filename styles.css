@@ -27,10 +27,11 @@ body {
 
 .box-container {
     position: relative;
-    z-index: -2;
+    z-index: -1;
     width: 100vw;
-    height: 100vh;
+    height: 51em;
     overflow-x: hidden;
+    overflow-y: visible;
 }
 .box {
     border: 1px solid black;
@@ -43,16 +44,19 @@ body {
     height: 15em;
     width: 10em;
     background-color: var(--main);
+    opacity: .9;
 }
 .blueTwo {
     height: 10em;
     width: 22em;
     background-color: var(--main);
+    opacity: .9;
 }
 .blueThree {
     height: 8em;
     width: 16em;
     background-color: var(--main);
+    opacity: .9;
 }
 
 
@@ -60,16 +64,19 @@ body {
     height: 10em;
     width: 12em;
     background-color: var(--secondary);
+    opacity: .9;
 }
 .redTwo {
     height: 14em;
     width: 6em;
     background-color: var(--secondary);
+    opacity: .9;
 }
 .redThree {
     height: 6em;
     width: 8em;
     background-color: var(--secondary);
+    opacity: .9;
 }
 
 /* --------------------- Header Row --------------------- */
@@ -136,29 +143,33 @@ body {
 }
 .titleName {
     font-size: 3em;
-    position: absolute;
-    top: 3%;
-    bottom: 0;
-    left: 10%;
-    right: 0; 
+    position: relative;
+    margin: 0;
+    padding: 20px;
+    /* top: 3%;
+    left: 10%; */
 }
 .titleIntro {
     font-size: 2em;
-    position: absolute;
-    top: 17%;
+    position: relative;
+    margin: 0;
+    padding: 0 20px;
+    /* top: 17%;
     bottom: 0;
     left: 15%;
-    right: 0; 
+    right: 0;  */
 }
 .titleDescriptor {
     font-size: 1.5em;
-    width:38%;
+    width:60%;
     text-align: justify;
-    position: absolute;
-    top: 30%;
+    position: relative;
+    margin: 0;
+    padding: 5px 40px;
+    /* top: 30%;
     bottom: 0;
     left: 20%;
-    right: 0; 
+    right: 0;  */
 }
 .techStackUsed {
     position: absolute;
@@ -169,7 +180,6 @@ body {
 .profilePicture {
     position: absolute;
     border-radius: 100%;
-    position: absolute;
     top: 0;
     bottom: 0;
     left: 85%;
@@ -193,14 +203,15 @@ body {
     width: 45px;
 }
 .techStackName {
+    display: none;
     font-size: 1.2em;
     position: absolute;
-    top: -22px;
+    top: -26px;
     z-index: -5;
     background-color: var(--light);
     text-align: center;
     padding: .1em;
-    width: 7em;
+    min-width: 4em;
     border-radius: 5px 5px 5px 0;
     box-shadow: 2px 0;
 }
@@ -220,6 +231,7 @@ body {
 }
 .techStackInfo:hover > .techStackName {
     z-index: 1;
+    display: block;
 }
 
 
@@ -231,6 +243,7 @@ Project Card
 
 
 .projectCardHolder {
+    z-index: 1;
     background-image: url(./resources/images/Background.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -238,7 +251,7 @@ Project Card
     display: grid;
     grid-template-columns: auto auto;
     grid-auto-rows: auto;
-    padding: 0 15%;
+    padding: 5% 15%;
     margin: 5% 0 5% 0;
     row-gap: 10em;
 }
@@ -414,16 +427,20 @@ Project Card
         margin: 5%;
     }
 
-
+    /**/
     @media screen and (max-width: 1550px) {
         body {font-size: 85%;}
+        .techStackName { top: -22px;}
     }
-    
+    /**/
     @media screen and (max-width: 1200px) {
         body {font-size: 75%;}
+        .techStackName { top: -19px;}
     }
-    
+    /**/
     @media screen and (max-width: 960px) {
+        body {font-size: 85%;}
+        .techStackName { top: -22px;}
         .box {
             display: none;
         }
@@ -439,35 +456,53 @@ Project Card
             margin: 10% auto 15% auto;
             position: relative;
             width: 100vw;
-            height: 70vh;
+            height: 60vh;
         }
+
+
         .personalLinkedin {
             z-index: 1;
             left: 85%;
-            top: 35%;
+            top: 40%;
         }
         .personalGithub {     
             z-index: 1;
-            top: 45%;
+            top: 50%;
             left: 85%;
         }
         .projectCardHolder {
             grid-template-columns: auto;
         }
     }
-
+    /**/
 @media screen and (max-width: 768px) {
-    .headerContent {
-        background-color: pink;
+    body {
+        font-size: 75%;
+    }
+    .titleName {
+        position: relative;
+        margin: 0;
+        padding: 20px;
+    }
+    .titleIntro {
+        position: relative;
+        margin: 0;
+        padding: 0 20px;
+    }
+    .titleDescriptor {
+        position: relative;
+        margin: 0;
+        padding: 0 40px;
+        width: 80%
     }
     .personalLinkedin {
         z-index: 1;
         left: 75%;
-        top: 35%;
+        top: 25%;
     }
     .personalGithub {     
         z-index: 1;
-        top: 45%;
+        top: 35%;
         left: 75%;
     }
     .techStackHolder {
@@ -476,17 +511,14 @@ Project Card
         padding-inline-start: 0!important;
     }
 }
-
+/**/
 @media screen and (max-width: 480px) {
-    .headerContent {
-            background-color: purple;
-        }
 
     .techStackHolder {
-            gap: .25em;
+            gap: 1.2em;
             left: 0%;
             margin-block-start: 0!important;
-            padding-inline-start: .25em!important;
+            padding-inline-start: .1em!important;
         }
         .personalLinkedin {
             z-index: 1;
@@ -498,6 +530,33 @@ Project Card
             top: 0;
             left: 75%;
         }
+        .techStackInfo {
+            height: 32px;
+            width: 32px;
+        }
+        
+        .techStackName { 
+            top: -19px;
+            box-shadow: 1px 0px;
+        }
+        .techStackNameRight {
+            right: -13px!important;
+            border-radius:  5px 5px 0 5px;
+            box-shadow: -1px 0px;
+        }
+        .projectCardHolder {
+            display: grid;
+            grid-template-columns: auto;
+            grid-auto-rows: auto;
+            padding:0;
+            margin:0;
+            row-gap: 10em;
+        }
+        .projectCard {
+            width: 100%;
+            margin: 0em;
+        }
+
     
 
 }
