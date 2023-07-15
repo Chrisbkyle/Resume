@@ -554,11 +554,13 @@ Project Card
     }
     .techStackHolder {        
         top: 48vh;
-        left: 3%;
-        right: 3%;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
         gap: .5px;
-        /* gap: 21px; */
         padding-inline-start: 0px!important;
+        width: 87vw;
     }
     .titleDescriptor {
         width: 100%;
