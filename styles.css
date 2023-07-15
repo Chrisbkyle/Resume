@@ -554,8 +554,8 @@ Project Card
     }
     .techStackHolder {        
         top: 48vh;
-        left: 2%;
-        right: 2%;
+        left: 3%;
+        right: 3%;
         gap: .5px;
         /* gap: 21px; */
         padding-inline-start: 0px!important;
