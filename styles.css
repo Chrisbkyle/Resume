@@ -556,11 +556,11 @@ Project Card
         top: 48vh;
         left: 0; 
         right: 0; 
-        margin-left: auto; 
-        margin-right: auto; 
+        /* margin-left: auto;  */
+        /* margin-right: auto;  */
         gap: .5px;
         padding-inline-start: 0px!important;
-        width: 87vw;
+        /* width: 87vw; */
     }
     .titleDescriptor {
         width: 100%;
@@ -592,7 +592,7 @@ Project Card
         border: 1px solid var(--main)
     }
     .techStackNameRight {
-        right: 7px!important;
+        right: 1.5px!important;
         border-radius:  5px 5px 0 5px;
         box-shadow: 0px 0px;
     }

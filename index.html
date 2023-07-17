@@ -64,6 +64,7 @@
             <ul class="techStackHolder">
                     <li class="techStackInfo"><div class="techStackName">HTML</div><img class="techStackImg" src="./resources/images/html-5.png"></li>
                     <li class="techStackInfo"><div class="techStackName">CSS</div><img class="techStackImg" src="./resources/images/css.png"></li>
+                    <li class="techStackInfo"><div class="techStackName">CSS</div><img class="techStackImg" src="./resources/images/JS.png"></li>
                     <li class="techStackInfo"><div class="techStackName">React</div><img class="techStackImg" src="./resources/images/React.png"></li>
                     <li class="techStackInfo"><div class="techStackName">NodeJS</div><img class="techStackImg" src="./resources/images/NodeJS.png"></li>
                     <li class="techStackInfo"><div class="techStackName techStackNameRight">mySQL</div><img class="techStackImg" src="./resources/images/mysql-logo-png-transparent.png"></li>
@@ -269,32 +270,47 @@
         let isDown = false;
         let startX;
         let scrollLeft;
-        
-        slider.addEventListener('mousedown', e => {
+
+        const gestureStart = e => {
             isDown = true;
             slider.classList.add('active');
             startX = e.pageX - slider.offsetLeft;
             scrollLeft = slider.scrollLeft;
-        })
-        
-        slider.addEventListener('mouseleave', () => {
-            isDown = false;
-            slider.classList.remove('active')
-        })
-        
-        slider.addEventListener('mouseup', () => {
-            isDown = false;
-            slider.classList.remove('active');
-        })
-        
-        slider.addEventListener('mousemove', (e) => {
+        }; 
+        const gestureMove = (e) => {
             if(!isDown) return;
             e.preventDefault();
             const x = e.pageX - slider.offsetLeft;
             const walk = (x - startX) * 1;
             slider.scrollLeft = scrollLeft - walk;
             console.log(walk);
-        });
+        };
+        const gestureEnd = () => {
+            isDown = false;
+            slider.classList.remove('active');
+        };
+        const gestureLeave = () => {
+            isDown = false;
+            slider.classList.remove('active')
+        }
+        
+        if (window.PointerEvent) {
+            slider.addEventListener('pointerdown', gestureStart)
+        
+            slider.addEventListener('pointerleave', gestureLeave)
+        
+            slider.addEventListener('pointerup', gestureEnd)
+        
+            slider.addEventListener('pointermove', gestureMove);  
+        }
+
+        slider.addEventListener('mousedown', gestureStart)
+        
+        slider.addEventListener('mouseleave', gestureLeave)
+        
+        slider.addEventListener('mouseup', gestureEnd)
+        
+        slider.addEventListener('mousemove', gestureMove);
         
     </script>
 </html>
