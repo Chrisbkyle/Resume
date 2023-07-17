@@ -312,7 +312,7 @@
         const slider = document.querySelector('.jobSliderContainer')
         let isDown = false;  //moving
         let startX; //initialPosition
-        let scrollLeft;  //transform
+        let scrollLeft;  //transform 
 
         const gestureStart = e => {
             isDown = true;
@@ -324,7 +324,7 @@
             if(!isDown) return;
             e.preventDefault();
             const x = e.pageX - slider.offsetLeft;
-            const walk = (x - startX) * 10;
+            const walk = (x - startX) * 1;
             slider.scrollLeft = scrollLeft - walk;
             console.log(walk);
         };
@@ -337,16 +337,15 @@
             slider.classList.remove('active')
         }
 
-        if (window.TouchEvent) {
-            slider.addEventListener('touchdown', gestureStart);
+        if (window.PointerEvent) {
+            slider.addEventListener('pointerdown', gestureStart);
         
-            slider.addEventListener('touchleave', gestureLeave);
+            slider.addEventListener('pointerleave', gestureLeave);
         
-            slider.addEventListener('touchup', gestureEnd);
+            slider.addEventListener('pointerup', gestureEnd);
         
-            slider.addEventListener('touchmove', gestureMove);
+            slider.addEventListener('pointermove', gestureMove);
         } else {
-
             slider.addEventListener('mousedown', gestureStart);
             
             slider.addEventListener('mouseleave', gestureLeave);
