@@ -566,6 +566,9 @@ Project Card
         grid-column-end: 1;
         background-color: var(--secondary);
     }
+    .achievements > div {
+        background: linear-gradient(90deg, black, var(--secondary));
+    }
     .cardSlider {
         grid-column-start: 1;
         grid-column-end: 1;
