@@ -337,23 +337,24 @@
             slider.classList.remove('active')
         }
 
-        if (window.PointerEvent) {
-            slider.addEventListener('pointerdown', gestureStart);
+        if (window.TouchEvent) {
+            slider.addEventListener('touchdown', gestureStart);
         
-            slider.addEventListener('pointerleave', gestureLeave);
+            slider.addEventListener('touchleave', gestureLeave);
         
-            slider.addEventListener('pointerup', gestureEnd);
+            slider.addEventListener('touchup', gestureEnd);
         
-            slider.addEventListener('pointermove', gestureMove);
-        }
+            slider.addEventListener('touchmove', gestureMove);
+        } else {
 
-        slider.addEventListener('mousedown', gestureStart);
-        
-        slider.addEventListener('mouseleave', gestureLeave);
-        
-        slider.addEventListener('mouseup', gestureEnd);
-        
-        slider.addEventListener('mousemove', gestureMove);
+            slider.addEventListener('mousedown', gestureStart);
+            
+            slider.addEventListener('mouseleave', gestureLeave);
+            
+            slider.addEventListener('mouseup', gestureEnd);
+            
+            slider.addEventListener('mousemove', gestureMove);
+        }
 
     </script>
 </html>
