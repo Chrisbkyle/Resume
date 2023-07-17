@@ -380,6 +380,7 @@ Project Card
         background-color: var(--light);
         width: 100%;
         height: 350px;
+        /* overflow-x: hidden; */
     }
     .cardSlider:hover {
         cursor: grab;
