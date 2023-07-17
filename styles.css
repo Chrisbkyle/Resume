@@ -564,6 +564,7 @@ Project Card
     .achievements {
         grid-column-start: 1;
         grid-column-end: 1;
+        background-color: var(--secondary);
     }
     .cardSlider {
         grid-column-start: 1;
