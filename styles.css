@@ -578,12 +578,24 @@ Project Card
         top: 35vh;
         left: 55%;
     }
+    .techStackHolder {
+        gap: .1vw;
+        left: 1;
+        right: 1;
+        margin-left: auto; 
+        margin-right: auto; 
+        width: 310px;
+    }
+    .techStackInfo {
+        height: 34px;
+        width: 34px;
+    }
     .techStackUsed {
         top: 42vh;
     }
     .techStackImg {
-        height: 38px;
-        width: 38px;
+        height: 34px;
+        width: 34px;
         background-color: white;
         border: 2px solid var(--main)
     }
@@ -594,7 +606,7 @@ Project Card
         border: 1px solid var(--main)
     }
     .techStackNameRight {
-        right: 1.5px!important;
+        right: 0;
         border-radius:  5px 5px 0 5px;
         box-shadow: 0px 0px;
     }
