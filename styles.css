@@ -11,15 +11,17 @@
 /* 2fa3ac */
 
 @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 * {
     box-sizing: border-box;
-    font-family: 'Kanit', sans-serif;
+    /* font-family: 'Kanit', sans-serif; */
+    font-family: 'VT323', monospace;
 }
 body {
     font-size: 100%;
     margin: 0;
-    font-family: 'Kanit', sans-serif;
+    /* font-family: 'Kanit', sans-serif; */
     width: 100%;
 }
 
@@ -135,7 +137,7 @@ body {
     border: 1px solid black; 
     position: absolute;
     background-color: var(--main);
-    height: 60vh;
+    height: 460px;
     width: 60vw;
     margin: 10vh 20vw;
     border-radius: 1em;
@@ -252,7 +254,7 @@ Project Card
     grid-template-columns: auto auto;
     grid-auto-rows: auto;
     padding: 5% 15%;
-    margin: 5% 0 5% 0;
+    margin: 5% 0;
     row-gap: 10em;
 }
 .projectCard {
@@ -351,13 +353,16 @@ Project Card
         padding:0 .5em;
         width: 50%;
     }
+    .educationLeft >h3 {
+        font-size: 1em;
+    }
 
     .educationRight {
         padding:0 .5em;
         width: 50%;
     }
-    .educationRight > h2 {
-        margin: 0;
+    .educationRight > h3 {
+        /* margin: 1em; */
         font-size: 1em;
     }
 .achievements {
@@ -368,6 +373,13 @@ Project Card
     grid-column-start: 1;
     grid-column-end: 2;
     max-height: 350px;
+}
+.achievements > div {
+    background: linear-gradient(90deg, black, var(--main));
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+    /* padding: 0; */
 }
 .achievements > h2 {
     margin: 0;
@@ -408,6 +420,7 @@ Project Card
     .cardContent {
         float: right;
         width: 45%;
+        margin-right: 5px;
     }
     .cardHeader {
         float: left;
@@ -428,6 +441,12 @@ Project Card
     .jobCardText {
         margin: 5%;
     }
+    .divider {
+        background: black;
+        width: 95%;
+        height: 1.2px;
+        margin: 5px 0;
+    }
 
     /**/
     @media screen and (max-width: 1550px) {
@@ -438,6 +457,9 @@ Project Card
     @media screen and (max-width: 1200px) {
         body {font-size: 75%;}
         .techStackName { top: -19px;}
+    }
+    .projectCardHolder{
+        padding: 5% 5%; 
     }
     /**/
     @media screen and (max-width: 960px) {
@@ -462,7 +484,7 @@ Project Card
             margin: 10% auto 15% auto;
             position: relative;
             width: 100vw;
-            height: 40vh;
+            height: 400px;
         }
         .personalLinkedin {
             z-index: 1;
@@ -493,7 +515,7 @@ Project Card
         font-size: 75%;
     }
     .headerContent {
-        height: 40vh;
+        height: 360px;
     }
     .titleName {
         position: relative;
@@ -514,11 +536,11 @@ Project Card
     .personalLinkedin {
         z-index: 1;
         left: 75%;
-        top: 25%;
+        top: 20%;
     }
     .personalGithub {     
         z-index: 1;
-        top: 35%;
+        top: 30%;
         left: 75%;
     }
     .techStackHolder {
@@ -552,7 +574,7 @@ Project Card
 @media screen and (max-width: 480px) {
     .headerContent {
         margin: 10% auto 40% auto;
-        height: 40vh;
+        height: 340px;
     }
     .techStackHolder {        
         top: 48vh;
