@@ -143,7 +143,7 @@
                             <h3>Topics Covered</h3>
                             <p>HTML, CSS, JavaScript</p>
                             <p>React, NodeJS</p>
-                            <p>Git and GitHub(including github actions), Docker, EC2</p>
+                            <p>Git and GitHub, Docker, EC2</p>
                         </div>
                     </div>
                 </div>
@@ -262,53 +262,10 @@
         */
 
 
-        // const track = document.querySelector('.jobSliderContainer')
-        // let initialPosition = null;
-        // let moving = false;
-        // let transform = 0;
-
-        // const gestureStart = (e) => {
-        //     initialPosition = e.pageX;
-        //     moving = true;
-        //     const transformMatrix = window.getComputedStyle(track).getPropertyValue('transform');
-        //     if(transformMatrix != 'none') {
-        //         transform = parseInt(transformMatrix.split(',')[4].trim());
-        //     }
-        // }
-
-        // const gestureMove = (e) => {
-        //     if (moving) {
-        //         const currentPosition = e.pageX;
-        //         const diff = currentPosition - initialPosition;
-        //         track.style.transform = `translateX(${transform - diff}px)`;
-        //     }
-        // };
-        // const gestureEnd = (e) => {
-        //     moving = false;
-        // }
-
-        // if (window.PointerEvent) {
-        //     window.addEventListener('pointerdown', gestureStart)
-              
-        //     window.addEventListener('pointerup', gestureEnd)
-        
-        //     window.addEventListener('pointermove', gestureMove)
-        // }
-
-        // window.addEventListener('mousedown', gestureStart)
-        
-        // window.addEventListener('mouseup', gestureEnd)
-        
-        // window.addEventListener('mousemove', gestureMove);
-
-        // window.addEventListener('mouseleave', () => {
-        //     isDown = false;
-        //     slider.classList.remove('active')})
-
         const slider = document.querySelector('.jobSliderContainer')
-        let isDown = false;  //moving
-        let startX; //initialPosition
-        let scrollLeft;  //transform 
+        let isDown = false;
+        let startX;
+        let scrollLeft;
 
         const gestureStart = e => {
             isDown = true;
