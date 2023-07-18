@@ -116,7 +116,7 @@ body {
 
 .personalLinkedin {
     position: absolute;
-    top: 78%;
+    top: 600px;
     right: 55%;
     background-color: var(--light);
     font-size: 1em;
@@ -128,7 +128,7 @@ body {
 }
 .personalGithub {
     position: absolute;
-    top:78%;
+    top:600px;
     left: 60%;
     background-color: var(--light);
     font-size: 1em;
@@ -496,11 +496,11 @@ Project Card
         .personalLinkedin {
             z-index: 1;
             left: 85%;
-            top: 20%;
+            top: 155px;
         }
         .personalGithub {     
             z-index: 1;
-            top: 30%;
+            top: 240px;
             left: 85%;
         }
         .projectCardHolder {
@@ -543,11 +543,11 @@ Project Card
     .personalLinkedin {
         z-index: 1;
         left: 75%;
-        top: 20%;
+        top: 155px;
     }
     .personalGithub {     
         z-index: 1;
-        top: 30%;
+        top: 240px;
         left: 75%;
     }
     .techStackHolder {
@@ -651,7 +651,10 @@ Project Card
         margin: 0em;
     }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 350px) {
+    * {
+        font-size: 96%;
+    }
     .contact{
         z-index: 1;
     }
@@ -664,6 +667,6 @@ Project Card
         width:100%;
     }
     .titleDescriptor {
-        padding: 5px 10px;
+        padding: 2px 10px;
     }
 }
