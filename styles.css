@@ -3,7 +3,9 @@
     /* redish */
     --secondary: #ac382f;
     /* blueish */
-    --main: #473dc9;
+    /* --main: #473dc9; */
+    /* --main: #5950CE; */
+    --main: #6B63D3;
     /* light */
     --light: #EED8C7;
 }
@@ -254,7 +256,7 @@ Project Card
 
 .projectCardHolder {
     z-index: 1;
-    background-image: url(./resources/images/Background.png);
+    /* background-image: url(./resources/images/Background.png); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -262,7 +264,7 @@ Project Card
     grid-template-columns: auto auto;
     grid-auto-rows: auto;
     padding: 5% 15%;
-    margin: 5% 0;
+    margin: 0%;
     row-gap: 10em;
 }
 .projectCard {
