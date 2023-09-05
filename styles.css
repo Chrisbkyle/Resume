@@ -303,6 +303,7 @@ Project Card
     font-size: 1em;
 }
 .projectCardBottom {
+    margin: 5% 0;
     border-top: 2px solid black;
     display: flex;
     align-items: center;
@@ -313,6 +314,7 @@ Project Card
 }
 .projectCardButtons {
     background-color: var(--secondary);
+    /* min-height: 19px; */
     width: 120px;
     font-size:1em;
     margin: .25em auto;
@@ -462,14 +464,26 @@ Project Card
         body {font-size: 85%;}
         .techStackName { top: -22px;}
     }
+    .projectCard{
+        font-size: 1em;
+    }
     /**/
     @media screen and (max-width: 1200px) {
         body {font-size: 75%;}
         .techStackName { top: -19px;}
+        .projectCardHolder{
+            padding: 5% 5%; 
+        }
+        .projectCard{
+            font-size: 1.2em;
+        }
     }
-    .projectCardHolder{
+    /* .projectCardHolder{
         padding: 5% 5%; 
     }
+    .projectCard{
+        font-size: 1.2em;
+    } */
     /**/
     @media screen and (max-width: 960px) {
         body {
@@ -516,6 +530,9 @@ Project Card
         }
         .education {
             height: 250px;
+        }
+        .projectCard {
+            font-size: 1.2em;
         }
     }
     /**/
@@ -629,7 +646,7 @@ Project Card
         border: 2px solid var(--main)
     }
     .techStackName { 
-        top: -21px;
+        top: -18px;
         box-shadow: 0px 0px;
         background-color: white;
         border: 1px solid var(--main)
@@ -654,6 +671,9 @@ Project Card
     .projectCard {
         width: 100%;
         margin: 0em;
+    }
+    .projectCardButtons {
+        font-size: 1.2em;
     }
 }
 @media screen and (max-width: 350px) {
